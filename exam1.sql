@@ -1,13 +1,13 @@
 ###sql exam 
 use classicmodels
-#Q1	Employees all over the world. Can you tell me the top three cities that we have employees?
+#Q1 Employees all over the world. Can you tell me the top three cities that we have employees?
 #Expected result:
 #City      employee count
 #San Francisco   6
 #Paris           5
 #Syndney         4
 
-select o.city as 'City' , count(e.employeeNumber) as 'employee count'
+select o.city , count(e.employeeNumber) as 'employee count'
 from employees e
 inner join offices o
 on e.officeCode = o.officeCode
